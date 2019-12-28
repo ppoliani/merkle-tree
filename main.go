@@ -11,13 +11,13 @@ func main() {
 	fmt.Printf("Merkel root is %v \n", merkle.HashToString(merkeRoot))
 
 	// proof
-	item := "nikos"
+	item := "pavlos"
 	proof := merkle.Proof {
 		Root: merkeRoot,
 		Index: 1,
 		Item: []byte(item),
 		Path: [][]byte{
-			merkle.LeafHash([]byte("pavloss")), 
+			merkle.LeafHash([]byte("nikos")), 
 			merkle.InnerHash(
 				merkle.LeafHash([]byte("george")), 
 				merkle.LeafHash([]byte("michalis")),
